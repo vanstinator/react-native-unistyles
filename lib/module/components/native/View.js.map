@@ -1,0 +1,1 @@
+{"version":3,"names":["View","NativeView","createUnistylesElement"],"sourceRoot":"../../../../src","sources":["components/native/View.tsx"],"mappings":";;AAAA,SAASA,IAAI,IAAIC,UAAU,QAAQ,cAAc;AACjD,SAASC,sBAAsB,QAAQ,YAAY;AAEnD,OAAO,MAAMF,IAAI,GAAGE,sBAAsB,CAACD,UAAU,CAAC","ignoreList":[]}

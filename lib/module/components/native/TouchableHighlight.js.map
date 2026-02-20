@@ -1,0 +1,1 @@
+{"version":3,"names":["TouchableHighlight","NativeTouchableHighlight","createUnistylesElement"],"sourceRoot":"../../../../src","sources":["components/native/TouchableHighlight.tsx"],"mappings":";;AAAA,SAASA,kBAAkB,IAAIC,wBAAwB,QAAQ,cAAc;AAC7E,SAASC,sBAAsB,QAAQ,YAAY;AAEnD,OAAO,MAAMF,kBAAkB,GAAGE,sBAAsB,CAACD,wBAAwB,CAAC","ignoreList":[]}

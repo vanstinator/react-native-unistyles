@@ -1,0 +1,1 @@
+{"version":3,"file":"AdaptiveTheme.d.ts","sourceRoot":"","sources":["../../../../src/components/AdaptiveTheme.tsx"],"names":[],"mappings":"AAAA,OAAO,KAA0B,MAAM,OAAO,CAAA;AAC9C,OAAO,KAAK,EAAE,iBAAiB,EAAE,MAAM,OAAO,CAAA;AAM9C,UAAU,kBAAmB,SAAQ,iBAAiB;IAClD,mBAAmB,CAAC,EAAE,MAAM,CAAA;CAC/B;AAED,eAAO,MAAM,aAAa,EAAE,KAAK,CAAC,iBAAiB,CAAC,kBAAkB,CAsBrE,CAAA"}

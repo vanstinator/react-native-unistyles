@@ -1,0 +1,1 @@
+{"version":3,"names":["VirtualizedList","NativeVirtualizedList","createUnistylesElement"],"sourceRoot":"../../../../src","sources":["components/native/VirtualizedList.tsx"],"mappings":";;AAAA,SAASA,eAAe,IAAIC,qBAAqB,QAAQ,cAAc;AACvE,SAASC,sBAAsB,QAAQ,YAAY;AAEnD,OAAO,MAAMF,eAAe,GAAGE,sBAAsB,CAACD,qBAAqB,CAAC","ignoreList":[]}

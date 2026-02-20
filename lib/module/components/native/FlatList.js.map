@@ -1,0 +1,1 @@
+{"version":3,"names":["FlatList","NativeFlatList","createUnistylesElement"],"sourceRoot":"../../../../src","sources":["components/native/FlatList.tsx"],"mappings":";;AAAA,SAASA,QAAQ,IAAIC,cAAc,QAAQ,cAAc;AACzD,SAASC,sBAAsB,QAAQ,YAAY;AAEnD,OAAO,MAAMF,QAAQ,GAAGE,sBAAsB,CAACD,cAAc,CAAC","ignoreList":[]}

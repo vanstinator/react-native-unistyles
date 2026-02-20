@@ -1,0 +1,1 @@
+{"version":3,"names":["ScrollView","NativeScrollView","createUnistylesElement"],"sourceRoot":"../../../../src","sources":["components/native/ScrollView.tsx"],"mappings":";;AAAA,SAASA,UAAU,IAAIC,gBAAgB,QAAQ,cAAc;AAC7D,SAASC,sBAAsB,QAAQ,YAAY;AAEnD,OAAO,MAAMF,UAAU,GAAGE,sBAAsB,CAACD,gBAAgB,CAAC","ignoreList":[]}

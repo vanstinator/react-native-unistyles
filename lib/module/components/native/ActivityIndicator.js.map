@@ -1,0 +1,1 @@
+{"version":3,"names":["ActivityIndicator","NativeActivityIndicator","createUnistylesElement"],"sourceRoot":"../../../../src","sources":["components/native/ActivityIndicator.tsx"],"mappings":";;AAAA,SAASA,iBAAiB,IAAIC,uBAAuB,QAAQ,cAAc;AAC3E,SAASC,sBAAsB,QAAQ,YAAY;AAEnD,OAAO,MAAMF,iBAAiB,GAAGE,sBAAsB,CAACD,uBAAuB,CAAC","ignoreList":[]}

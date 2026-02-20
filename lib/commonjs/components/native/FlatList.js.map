@@ -1,0 +1,1 @@
+{"version":3,"names":["_reactNative","require","_core","FlatList","exports","createUnistylesElement","NativeFlatList"],"sourceRoot":"../../../../src","sources":["components/native/FlatList.tsx"],"mappings":";;;;;;AAAA,IAAAA,YAAA,GAAAC,OAAA;AACA,IAAAC,KAAA,GAAAD,OAAA;AAEO,MAAME,QAAQ,GAAAC,OAAA,CAAAD,QAAA,GAAG,IAAAE,4BAAsB,EAACC,qBAAc,CAAC","ignoreList":[]}

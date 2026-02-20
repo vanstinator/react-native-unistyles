@@ -1,0 +1,1 @@
+{"version":3,"names":["Image","NativeImage","createUnistylesElement"],"sourceRoot":"../../../../src","sources":["components/native/Image.native.tsx"],"mappings":";;AAAA,SAASA,KAAK,IAAIC,WAAW,QAAQ,cAAc;AACnD,SAASC,sBAAsB,QAAQ,YAAY;AAEnD,OAAO,MAAMF,KAAK,GAAGE,sBAAsB,CAACD,WAAW,CAAC","ignoreList":[]}

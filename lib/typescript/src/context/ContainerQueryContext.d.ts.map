@@ -1,0 +1,1 @@
+{"version":3,"file":"ContainerQueryContext.d.ts","sourceRoot":"","sources":["../../../../src/context/ContainerQueryContext.ts"],"names":[],"mappings":"AAEA,MAAM,MAAM,mBAAmB,GAAG;IAC9B,KAAK,EAAE,MAAM,CAAA;IACb,MAAM,EAAE,MAAM,CAAA;IACd,UAAU,EAAE,MAAM,GAAG,SAAS,CAAA;IAC9B,aAAa,CAAC,EAAE,MAAM,CAAA;CACzB,CAAA;AAED,eAAO,MAAM,qBAAqB,qDAAkD,CAAA;AAEpF,eAAO,MAAM,sBAAsB,kCAA0C,CAAA"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"ApplyContainerDimensions.d.ts","sourceRoot":"","sources":["../../../../src/components/ApplyContainerDimensions.tsx"],"names":[],"mappings":"AAGA,KAAK,6BAA6B,GAAG;IACjC,UAAU,CAAC,EAAE;QAAE,KAAK,EAAE,MAAM,CAAC;QAAC,MAAM,EAAE,MAAM,CAAA;KAAE,CAAA;CACjD,CAAA;AAED,eAAO,MAAM,wBAAwB,EAAE,KAAK,CAAC,iBAAiB,CAAC,6BAA6B,CAU3F,CAAA"}

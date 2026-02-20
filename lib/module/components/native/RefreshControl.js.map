@@ -1,0 +1,1 @@
+{"version":3,"names":["RefreshControl","NativeRefreshControl","createUnistylesElement"],"sourceRoot":"../../../../src","sources":["components/native/RefreshControl.tsx"],"mappings":";;AAAA,SAASA,cAAc,IAAIC,oBAAoB,QAAQ,cAAc;AACrE,SAASC,sBAAsB,QAAQ,YAAY;AAEnD,OAAO,MAAMF,cAAc,GAAGE,sBAAsB,CAACD,oBAAoB,CAAC","ignoreList":[]}

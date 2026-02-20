@@ -1,0 +1,1 @@
+{"version":3,"names":["TextInput","NativeTextInput","createUnistylesElement"],"sourceRoot":"../../../../src","sources":["components/native/TextInput.tsx"],"mappings":";;AAAA,SAASA,SAAS,IAAIC,eAAe,QAAQ,cAAc;AAC3D,SAASC,sBAAsB,QAAQ,YAAY;AAEnD,OAAO,MAAMF,SAAS,GAAGE,sBAAsB,CAACD,eAAe,CAAC","ignoreList":[]}

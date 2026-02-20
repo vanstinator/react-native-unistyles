@@ -1,0 +1,1 @@
+{"version":3,"names":["_reactNative","require","_core","Switch","exports","createUnistylesElement","NativeSwitch"],"sourceRoot":"../../../../src","sources":["components/native/Switch.tsx"],"mappings":";;;;;;AAAA,IAAAA,YAAA,GAAAC,OAAA;AACA,IAAAC,KAAA,GAAAD,OAAA;AAEO,MAAME,MAAM,GAAAC,OAAA,CAAAD,MAAA,GAAG,IAAAE,4BAAsB,EAACC,mBAAY,CAAC","ignoreList":[]}

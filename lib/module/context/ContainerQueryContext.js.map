@@ -1,0 +1,1 @@
+{"version":3,"names":["createContext","useContext","ContainerQueryContext","useContainerDimensions"],"sourceRoot":"../../../src","sources":["context/ContainerQueryContext.ts"],"mappings":";;AAAA,SAASA,aAAa,EAAEC,UAAU,QAAQ,OAAO;AASjD,OAAO,MAAMC,qBAAqB,gBAAGF,aAAa,CAA6B,IAAI,CAAC;AAEpF,OAAO,MAAMG,sBAAsB,GAAGA,CAAA,KAAMF,UAAU,CAACC,qBAAqB,CAAC","ignoreList":[]}

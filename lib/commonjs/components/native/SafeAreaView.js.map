@@ -1,0 +1,1 @@
+{"version":3,"names":["_reactNative","require","_core","SafeAreaView","exports","createUnistylesElement","NativeSafeAreaView"],"sourceRoot":"../../../../src","sources":["components/native/SafeAreaView.tsx"],"mappings":";;;;;;AAAA,IAAAA,YAAA,GAAAC,OAAA;AACA,IAAAC,KAAA,GAAAD,OAAA;AAEO,MAAME,YAAY,GAAAC,OAAA,CAAAD,YAAA,GAAG,IAAAE,4BAAsB,EAACC,yBAAkB,CAAC","ignoreList":[]}

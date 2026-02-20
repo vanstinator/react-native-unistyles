@@ -1,0 +1,1 @@
+{"version":3,"names":["SafeAreaView","NativeSafeAreaView","createUnistylesElement"],"sourceRoot":"../../../../src","sources":["components/native/SafeAreaView.tsx"],"mappings":";;AAAA,SAASA,YAAY,IAAIC,kBAAkB,QAAQ,cAAc;AACjE,SAASC,sBAAsB,QAAQ,YAAY;AAEnD,OAAO,MAAMF,YAAY,GAAGE,sBAAsB,CAACD,kBAAkB,CAAC","ignoreList":[]}

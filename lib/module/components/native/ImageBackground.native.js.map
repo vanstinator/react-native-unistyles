@@ -1,0 +1,1 @@
+{"version":3,"names":["ImageBackground","NativeImageBackground","createUnistylesImageBackground"],"sourceRoot":"../../../../src","sources":["components/native/ImageBackground.native.tsx"],"mappings":";;AAAA,SAASA,eAAe,IAAIC,qBAAqB,QAAQ,cAAc;AACvE,SAASC,8BAA8B,QAAQ,YAAY;AAE3D,OAAO,MAAMF,eAAe,GAAGE,8BAA8B,CAACD,qBAAqB,CAAC","ignoreList":[]}

@@ -1,0 +1,1 @@
+{"version":3,"names":["_reactNative","require","_core","TextInput","exports","createUnistylesElement","NativeTextInput"],"sourceRoot":"../../../../src","sources":["components/native/TextInput.tsx"],"mappings":";;;;;;AAAA,IAAAA,YAAA,GAAAC,OAAA;AACA,IAAAC,KAAA,GAAAD,OAAA;AAEO,MAAME,SAAS,GAAAC,OAAA,CAAAD,SAAA,GAAG,IAAAE,4BAAsB,EAACC,sBAAe,CAAC","ignoreList":[]}

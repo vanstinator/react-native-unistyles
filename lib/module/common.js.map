@@ -1,0 +1,1 @@
+{"version":3,"names":["Platform","isWeb","OS","isIOS","isAndroid"],"sourceRoot":"../../src","sources":["common.ts"],"mappings":";;AAAA,SAASA,QAAQ,QAAQ,cAAc;AAEvC,OAAO,MAAMC,KAAK,GAAGD,QAAQ,CAACE,EAAE,KAAK,KAAK;AAC1C,OAAO,MAAMC,KAAK,GAAGH,QAAQ,CAACE,EAAE,KAAK,KAAK;AAC1C,OAAO,MAAME,SAAS,GAAGJ,QAAQ,CAACE,EAAE,KAAK,SAAS","ignoreList":[]}
