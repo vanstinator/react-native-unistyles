@@ -1,8 +1,8 @@
 import { isPseudoClass } from '../convert/pseudo'
-import { getMediaQuery } from '../utils'
+import { getContainerQuery, getMediaQuery } from '../utils'
 import type { CSSState } from './state'
 
-export const convertToCSS = (hash: string, value: Record<string, any>, state: CSSState) => {
+export const convertToCSS = (hash: string, value: Record<string, any>, state: CSSState, containerName?: string) => {
     Object.entries(value).forEach(([styleKey, styleValue]) => {
         if (styleKey[0] === '_') {
             const isStylePseudoClass = isPseudoClass(styleKey)
@@ -20,6 +20,18 @@ export const convertToCSS = (hash: string, value: Record<string, any>, state: CS
                             propertyKey: breakpointStyleKey,
                             value: breakpointStyleValue,
                         })
+
+                        if (containerName) {
+                            const cq = getContainerQuery(pseudoStyleKey, allBreakpoints, containerName)
+
+                            state.set({
+                                mediaQuery: cq,
+                                className: pseudoClassName,
+                                propertyKey: breakpointStyleKey,
+                                value: breakpointStyleValue,
+                                isMq: true,
+                            })
+                        }
                     })
 
                     return
@@ -54,6 +66,18 @@ export const convertToCSS = (hash: string, value: Record<string, any>, state: CS
                     propertyKey: breakpointStyleKey,
                     value: breakpointStyleValue,
                 })
+
+                if (containerName) {
+                    const cq = getContainerQuery(styleKey, allBreakpoints, containerName)
+
+                    state.set({
+                        mediaQuery: cq,
+                        className: hash,
+                        propertyKey: breakpointStyleKey,
+                        value: breakpointStyleValue,
+                        isMq: true,
+                    })
+                }
             })
 
             return

@@ -98,15 +98,21 @@ export class UnistylesRegistry {
         return Promise.resolve(false)
     }
 
-    add = (value: UnistylesValues, forChild?: boolean) => {
+    add = (value: UnistylesValues, forChild?: boolean, containerName?: string) => {
         const generatedHash = generateHash(value)
-        const hash = forChild
+        const baseHash = forChild
             ? `${generatedHash} > *`
             : generatedHash
+        const hash = containerName
+            ? `${baseHash}`
+            : baseHash
+        const cacheKey = containerName
+            ? `${hash}__cq__${containerName}`
+            : hash
 
-        if (!this.stylesCache.has(hash)) {
-            this.applyStyles(hash, value)
-            this.stylesCache.add(hash)
+        if (!this.stylesCache.has(cacheKey)) {
+            this.applyStyles(hash, value, containerName)
+            this.stylesCache.add(cacheKey)
 
             return { hash, existingHash: false }
         }
@@ -114,8 +120,8 @@ export class UnistylesRegistry {
         return { hash, existingHash: true }
     }
 
-    applyStyles = (hash: string, value: UnistylesValues) => {
-        this.css.add(hash, value)
+    applyStyles = (hash: string, value: UnistylesValues, containerName?: string) => {
+        this.css.add(hash, value, containerName)
     }
 
     reset = () => {

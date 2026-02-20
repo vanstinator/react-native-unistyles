@@ -1,4 +1,5 @@
-import { useEffect, useLayoutEffect, useReducer, useRef, useState } from 'react'
+import { useContext, useEffect, useLayoutEffect, useReducer, useRef, useState } from 'react'
+import { ContainerQueryContext } from '../../context/ContainerQueryContext'
 import { type UnistylesMiniRuntime, UnistylesRuntime, UnistylesShadowRegistry } from '../../specs'
 // It's imported that way because of circular dependency
 import { UnistyleDependency } from '../../specs/NativePlatform'
@@ -28,6 +29,7 @@ const RTDependencyMap = {
 } satisfies Partial<Record<keyof UnistylesMiniRuntime, UnistyleDependency>>
 
 export const useProxifiedUnistyles = (forcedTheme?: UnistylesTheme) => {
+    const containerDims = useContext(ContainerQueryContext)
     const [scopedTheme, setScopedTheme] = useState(forcedTheme ?? UnistylesShadowRegistry.getScopedTheme() as UnistylesTheme)
     const [dependencies] = useState(() => new Set<number>())
     const [theme, setTheme] = useState(UnistylesRuntime.getTheme(scopedTheme))
@@ -92,8 +94,18 @@ export const useProxifiedUnistyles = (forcedTheme?: UnistylesTheme) => {
                 })
             }
 
+            if (containerDims && prop === 'breakpoint') {
+                return containerDims.breakpoint
+            }
+
+            if (containerDims && prop === 'screen') {
+                return { width: containerDims.width, height: containerDims.height }
+            }
+
             if (prop in RTDependencyMap) {
-                dependencies.add(RTDependencyMap[prop as keyof typeof RTDependencyMap])
+                if (!containerDims || (prop !== 'breakpoint' && prop !== 'screen')) {
+                    dependencies.add(RTDependencyMap[prop as keyof typeof RTDependencyMap])
+                }
             }
 
             if (prop === 'themeName' && scopedTheme) {

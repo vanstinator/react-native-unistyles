@@ -7,6 +7,7 @@
 #include <unordered_map>
 #include <unordered_set>
 #include "Breakpoints.h"
+#include "Dimensions.hpp"
 #include "StyleSheetRegistry.h"
 #include "StyleSheet.h"
 #include "Unistyle.h"
@@ -48,6 +49,8 @@ struct UnistylesRegistry: public StyleSheetRegistry {
     const std::optional<std::string> getScopedTheme();
     void removeDuplicatedUnistyles(jsi::Runtime& rt, const ShadowNodeFamily* shadowNodeFamily, std::vector<core::Unistyle::Shared>& unistyles);
     void setScopedTheme(std::optional<std::string> themeName);
+    std::optional<Dimensions> getContainerDimensions();
+    void setContainerDimensions(std::optional<Dimensions> dimensions);
     core::Unistyle::Shared getUnistyleById(jsi::Runtime& rt, std::string unistyleID);
     void destroy();
 
@@ -55,6 +58,7 @@ private:
     UnistylesRegistry() = default;
 
     std::optional<std::string> _scopedTheme{};
+    std::optional<Dimensions> _containerDimensions{};
     std::unordered_map<jsi::Runtime*, UnistylesState> _states{};
     std::unordered_map<jsi::Runtime*, std::unordered_map<int, std::shared_ptr<core::StyleSheet>>> _styleSheetRegistry{};
     std::unordered_map<jsi::Runtime*, std::unordered_map<const ShadowNodeFamily*, std::vector<std::shared_ptr<UnistyleData>>>> _shadowRegistry{};

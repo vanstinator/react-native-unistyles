@@ -138,6 +138,41 @@ jsi::Value HybridShadowRegistry::getScopedTheme(jsi::Runtime &rt, const jsi::Val
         : jsi::Value::undefined();
 }
 
+jsi::Value HybridShadowRegistry::setContainerDimensions(jsi::Runtime &rt, const jsi::Value &thisValue, const jsi::Value *args, size_t count) {
+    helpers::assertThat(rt, count == 1, "Unistyles: setContainerDimensions expected 1 argument.");
+
+    auto& registry = core::UnistylesRegistry::get();
+
+    if (args[0].isUndefined() || args[0].isNull()) {
+        registry.setContainerDimensions(std::nullopt);
+    } else {
+        auto obj = args[0].asObject(rt);
+        auto width = obj.getProperty(rt, "width").asNumber();
+        auto height = obj.getProperty(rt, "height").asNumber();
+
+        registry.setContainerDimensions(Dimensions(width, height));
+    }
+
+    return jsi::Value::undefined();
+}
+
+jsi::Value HybridShadowRegistry::getContainerDimensions(jsi::Runtime &rt, const jsi::Value &thisValue, const jsi::Value *args, size_t count) {
+    auto& registry = core::UnistylesRegistry::get();
+    auto maybeDims = registry.getContainerDimensions();
+
+    if (!maybeDims.has_value()) {
+        return jsi::Value::undefined();
+    }
+
+    auto dims = maybeDims.value();
+    jsi::Object result(rt);
+
+    result.setProperty(rt, "width", jsi::Value(dims.width));
+    result.setProperty(rt, "height", jsi::Value(dims.height));
+
+    return result;
+}
+
 std::shared_ptr<const core::ShadowNode> HybridShadowRegistry::getShadowNodeFromRef(jsi::Runtime& rt, const jsi::Value& maybeRef) {
 #if REACT_NATIVE_VERSION_MINOR >= 81
     return Bridging<std::shared_ptr<const ShadowNode>>::fromJs(rt, maybeRef);

@@ -245,9 +245,18 @@ void core::UnistylesRegistry::setScopedTheme(std::optional<std::string> themeNam
     this->_scopedTheme = std::move(themeName);
 }
 
+std::optional<Dimensions> core::UnistylesRegistry::getContainerDimensions() {
+    return this->_containerDimensions;
+}
+
+void core::UnistylesRegistry::setContainerDimensions(std::optional<Dimensions> dimensions) {
+    this->_containerDimensions = std::move(dimensions);
+}
+
 void core::UnistylesRegistry::destroy() {
     this->_states.clear();
     this->_styleSheetRegistry.clear();
     this->_shadowRegistry.clear();
     this->_scopedTheme = std::nullopt;
+    this->_containerDimensions = std::nullopt;
 }

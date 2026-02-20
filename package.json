@@ -9,7 +9,7 @@
     "lint": "biome lint",
     "check": "biome check --write",
     "check:ci": "biome check",
-    "prepare": "husky && bob build && yarn plugin:build && yarn repack:plugin:build",
+    "prepare": "bob build && yarn plugin:build && yarn repack:plugin:build",
     "precommit": "concurrently 'yarn tsc' 'yarn lint' 'yarn check' 'yarn test' 'yarn circular:check'",
     "plugin:build": "node plugin/esbuild.js",
     "repack:plugin:build": "node repack-plugin/esbuild.js",
@@ -75,6 +75,8 @@
     }
   },
   "files": [
+    "tsconfig.json",
+    "tsconfig.build.json",
     "src",
     "lib",
     "ios",
@@ -169,11 +171,6 @@
       "optional": true
     }
   },
-  "workspaces": [
-    "example",
-    "docs",
-    "expo-example"
-  ],
   "packageManager": "yarn@3.6.1",
   "engines": {
     "node": ">= 18.0.0"
@@ -215,5 +212,9 @@
     "name": "TurboUnistyles",
     "type": "modules",
     "jsSrcsDir": "./src/specs/TurboUnistyles"
+  },
+  "volta": {
+    "yarn": "3.6.1",
+    "node": "22.22.0"
   }
 }

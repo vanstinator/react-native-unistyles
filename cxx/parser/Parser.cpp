@@ -771,12 +771,17 @@ jsi::Value parser::Parser::getValueFromBreakpoints(jsi::Runtime& rt, Unistyle::S
 
     auto sortedBreakpoints = state.getSortedBreakpointPairs();
     auto hasBreakpoints = !sortedBreakpoints.empty();
-    auto currentBreakpoint = state.getCurrentBreakpointName();
-    auto rawDimensions = this->_unistylesRuntime->getScreen();
+    auto containerDims = registry.getContainerDimensions();
+    auto rawDimensions = containerDims.has_value()
+        ? containerDims.value()
+        : this->_unistylesRuntime->getScreen();
     auto pixelRatio = this->_unistylesRuntime->getPixelRatio();
-    auto dimensions = registry.shouldUsePointsForBreakpoints
+    auto dimensions = (!containerDims.has_value() && registry.shouldUsePointsForBreakpoints)
         ? Dimensions(rawDimensions.width / pixelRatio, rawDimensions.height / pixelRatio)
         : rawDimensions;
+    auto currentBreakpoint = containerDims.has_value() && hasBreakpoints
+        ? std::make_optional(helpers::getBreakpointFromScreenWidth(static_cast<int>(dimensions.width), sortedBreakpoints))
+        : state.getCurrentBreakpointName();
     auto currentOrientation = dimensions.width > dimensions.height
         ? "landscape"
         : "portrait";
