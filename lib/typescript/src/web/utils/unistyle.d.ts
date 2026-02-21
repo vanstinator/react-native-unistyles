@@ -17,7 +17,7 @@ export declare const extractSecrets: (object: any) => {
 } | undefined;
 export declare const removeInlineStyles: (values: UnistylesValues) => {};
 export declare const getMediaQuery: (query: string, allBreakpoints: Array<string>) => string;
-export declare const getContainerQuery: (query: string, allBreakpoints: Array<string>, containerName: string) => string;
+export declare const getContainerQuery: (query: string, _allBreakpoints: Array<string>, containerName: string) => string;
 export declare const extractUnistyleDependencies: (value: any) => UnistyleDependency[];
 export declare const checkForProp: (value: any, prop: string) => boolean;
 export declare const checkForAnimated: (value: any) => boolean;

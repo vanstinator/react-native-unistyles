@@ -98,7 +98,7 @@ export const getMediaQuery = (query: string, allBreakpoints: Array<string>) => {
     return `@media ${queries}`
 }
 
-export const getContainerQuery = (query: string, allBreakpoints: Array<string>, containerName: string) => {
+export const getContainerQuery = (query: string, _allBreakpoints: Array<string>, containerName: string) => {
     if (Object.values(Orientation).includes(query as Orientation)) {
         return `@container ${containerName} (orientation: ${query})`
     }
@@ -115,18 +115,12 @@ export const getContainerQuery = (query: string, allBreakpoints: Array<string>, 
         return `@container ${containerName} ${queries}`
     }
 
+    // Use min-width only (no max-width) so the CSS cascade fills gaps:
+    // each rule covers from its breakpoint to infinity, with later/larger
+    // rules overriding earlier/smaller ones — matching native parser behavior
     const breakpointValue = unistyles.services.runtime.breakpoints[query as keyof UnistylesBreakpoints] ?? 0
-    const nextBreakpoint = allBreakpoints
-        .filter((b): b is keyof UnistylesBreakpoints => b in unistyles.services.runtime.breakpoints)
-        .map(b => unistyles.services.runtime.breakpoints[b] as number)
-        .sort((a, b) => a - b)
-        .find(b => b > breakpointValue)
-    const queries = [
-        `(min-width: ${breakpointValue}px)`,
-        nextBreakpoint ? `(max-width: ${nextBreakpoint - 1}px)` : undefined,
-    ].filter(Boolean).join(' and ')
 
-    return `@container ${containerName} (${queries})`
+    return `@container ${containerName} (min-width: ${breakpointValue}px)`
 }
 
 export const extractUnistyleDependencies = (value: any) => {
