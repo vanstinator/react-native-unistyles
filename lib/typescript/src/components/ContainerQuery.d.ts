@@ -1,5 +1,5 @@
 import React from 'react';
-import type { ViewStyle } from 'react-native';
+import { type ViewStyle } from 'react-native';
 type ContainerQueryProps = React.PropsWithChildren<{
     style?: ViewStyle;
 }>;

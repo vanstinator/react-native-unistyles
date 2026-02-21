@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useId, useRef, useState } from 'react'
-import type { ViewStyle } from 'react-native'
+import { View, type ViewStyle } from 'react-native'
 import { ContainerQueryContext, type ContainerDimensions } from '../context/ContainerQueryContext'
 import * as unistyles from '../web/services'
 
@@ -33,7 +33,7 @@ const ApplyContainerName: React.FunctionComponent<{ name?: string }> = ({ name }
 export const ContainerQuery: React.FunctionComponent<ContainerQueryProps> = ({ children, style }) => {
     const uniqueId = useId()
     const containerName = `uni-cq-${uniqueId.replace(/:/g, '')}`
-    const containerRef = useRef<HTMLDivElement>(null)
+    const containerRef = useRef<View>(null)
     const [dims, setDims] = useState<ContainerDimensions | null>(null)
     const breakpoints = (unistyles.services.runtime.breakpoints ?? {}) as Record<string, number | undefined>
     const previousContainerName = unistyles.services.shadowRegistry.getContainerName()
@@ -45,11 +45,14 @@ export const ContainerQuery: React.FunctionComponent<ContainerQueryProps> = ({ c
     }, [containerName])
 
     useEffect(() => {
-        const element = containerRef.current
+        const element = containerRef.current as unknown as HTMLElement
 
         if (!element) {
             return
         }
+
+        element.style.containerType = 'inline-size'
+        element.style.containerName = containerName
 
         const observer = new ResizeObserver(entries => {
             const entry = entries[0]
@@ -70,23 +73,15 @@ export const ContainerQuery: React.FunctionComponent<ContainerQueryProps> = ({ c
         updateDimensions(width, height)
 
         return () => observer.disconnect()
-    }, [updateDimensions])
-
-    const containerStyle: React.CSSProperties = {
-        display: 'flex',
-        flexDirection: 'column',
-        containerType: 'inline-size',
-        containerName,
-        ...(style as React.CSSProperties)
-    }
+    }, [updateDimensions, containerName])
 
     return (
-        <div ref={containerRef} style={containerStyle}>
+        <View ref={containerRef} style={style}>
             <ApplyContainerName name={containerName} />
             <ContainerQueryContext.Provider value={dims}>
                 {children}
             </ContainerQueryContext.Provider>
             <ApplyContainerName name={previousContainerName} />
-        </div>
+        </View>
     )
 }
