@@ -73,6 +73,8 @@ export const ContainerQuery: React.FunctionComponent<ContainerQueryProps> = ({ c
     }, [updateDimensions])
 
     const containerStyle: React.CSSProperties = {
+        display: 'flex',
+        flexDirection: 'column',
         containerType: 'inline-size',
         containerName,
         ...(style as React.CSSProperties)
