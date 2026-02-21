@@ -12,26 +12,17 @@ export const convertToCSS = (hash: string, value: Record<string, any>, state: CS
                 if (typeof pseudoStyleValue === 'object' && pseudoStyleValue !== null) {
                     const allBreakpoints = Object.keys(styleValue)
                     Object.entries(pseudoStyleValue).forEach(([breakpointStyleKey, breakpointStyleValue]) => {
-                        const mediaQuery = getMediaQuery(pseudoStyleKey, allBreakpoints)
+                        const query = containerName
+                            ? getContainerQuery(pseudoStyleKey, allBreakpoints, containerName)
+                            : getMediaQuery(pseudoStyleKey, allBreakpoints)
 
                         state.set({
-                            mediaQuery,
+                            mediaQuery: query,
                             className: pseudoClassName,
                             propertyKey: breakpointStyleKey,
                             value: breakpointStyleValue,
+                            isMq: !!containerName,
                         })
-
-                        if (containerName) {
-                            const cq = getContainerQuery(pseudoStyleKey, allBreakpoints, containerName)
-
-                            state.set({
-                                mediaQuery: cq,
-                                className: pseudoClassName,
-                                propertyKey: breakpointStyleKey,
-                                value: breakpointStyleValue,
-                                isMq: true,
-                            })
-                        }
                     })
 
                     return
@@ -58,26 +49,17 @@ export const convertToCSS = (hash: string, value: Record<string, any>, state: CS
                         return breakpointStyleKey in value
                     })
                     .map(([key]) => key)
-                const mediaQuery = getMediaQuery(styleKey, allBreakpoints)
+                const query = containerName
+                    ? getContainerQuery(styleKey, allBreakpoints, containerName)
+                    : getMediaQuery(styleKey, allBreakpoints)
 
                 state.set({
-                    mediaQuery,
+                    mediaQuery: query,
                     className: hash,
                     propertyKey: breakpointStyleKey,
                     value: breakpointStyleValue,
+                    isMq: !!containerName,
                 })
-
-                if (containerName) {
-                    const cq = getContainerQuery(styleKey, allBreakpoints, containerName)
-
-                    state.set({
-                        mediaQuery: cq,
-                        className: hash,
-                        propertyKey: breakpointStyleKey,
-                        value: breakpointStyleValue,
-                        isMq: true,
-                    })
-                }
             })
 
             return
