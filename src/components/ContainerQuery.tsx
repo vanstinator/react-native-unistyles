@@ -51,7 +51,7 @@ export const ContainerQuery: React.FunctionComponent<ContainerQueryProps> = ({ c
             return
         }
 
-        element.style.containerType = 'inline-size'
+        // element.style.containerType = 'inline-size'
         element.style.containerName = containerName
 
         const observer = new ResizeObserver(entries => {
