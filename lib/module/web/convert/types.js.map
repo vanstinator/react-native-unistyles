@@ -1,0 +1,1 @@
+{"version":3,"names":["TEXT_SHADOW_STYLES","BOX_SHADOW_STYLES"],"sourceRoot":"../../../../src","sources":["web/convert/types.ts"],"mappings":";;AAMA,OAAO,MAAMA,kBAAkB,GAAG,CAAC,iBAAiB,EAAE,kBAAkB,EAAE,kBAAkB,CAAU;AAItG,OAAO,MAAMC,iBAAiB,GAAG,CAAC,aAAa,EAAE,cAAc,EAAE,eAAe,EAAE,cAAc,CAAU","ignoreList":[]}

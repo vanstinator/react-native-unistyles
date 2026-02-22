@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../../../src/core/useProxifiedUnistyles/types.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,kBAAkB,EAAE,MAAM,aAAa,CAAA;AAErD,MAAM,MAAM,aAAa,GAAG;IACxB,WAAW,EAAE,YAAY,CAAC;IAC1B,aAAa,CAAC,eAAe,EAAE,OAAO,GAAG,IAAI,CAAC;IAC9C,YAAY,EAAE,KAAK,CAAC,kBAAkB,CAAC,CAAA;CAC1C,CAAA"}

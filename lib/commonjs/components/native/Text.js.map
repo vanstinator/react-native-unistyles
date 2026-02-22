@@ -1,0 +1,1 @@
+{"version":3,"names":["_reactNative","require","_core","Text","exports","createUnistylesElement","NativeText"],"sourceRoot":"../../../../src","sources":["components/native/Text.tsx"],"mappings":";;;;;;AAAA,IAAAA,YAAA,GAAAC,OAAA;AACA,IAAAC,KAAA,GAAAD,OAAA;AAEO,MAAME,IAAI,GAAAC,OAAA,CAAAD,IAAA,GAAG,IAAAE,4BAAsB,EAACC,iBAAU,CAAC","ignoreList":[]}

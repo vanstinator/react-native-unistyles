@@ -1,0 +1,1 @@
+{"version":3,"names":["TouchableOpacity","NativeTouchableOpacity","createUnistylesElement"],"sourceRoot":"../../../../src","sources":["components/native/TouchableOpacity.tsx"],"mappings":";;AAAA,SAASA,gBAAgB,IAAIC,sBAAsB,QAAQ,cAAc;AACzE,SAASC,sBAAsB,QAAQ,YAAY;AAEnD,OAAO,MAAMF,gBAAgB,GAAGE,sBAAsB,CAACD,sBAAsB,CAAC","ignoreList":[]}

@@ -1,0 +1,1 @@
+{"version":3,"names":["SectionList","NativeSectionList","createUnistylesElement"],"sourceRoot":"../../../../src","sources":["components/native/SectionList.tsx"],"mappings":";;AAAA,SAASA,WAAW,IAAIC,iBAAiB,QAAQ,cAAc;AAC/D,SAASC,sBAAsB,QAAQ,YAAY;AAEnD,OAAO,MAAMF,WAAW,GAAGE,sBAAsB,CAACD,iBAAiB,CAAC","ignoreList":[]}

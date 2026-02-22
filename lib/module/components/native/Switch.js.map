@@ -1,0 +1,1 @@
+{"version":3,"names":["Switch","NativeSwitch","createUnistylesElement"],"sourceRoot":"../../../../src","sources":["components/native/Switch.tsx"],"mappings":";;AAAA,SAASA,MAAM,IAAIC,YAAY,QAAQ,cAAc;AACrD,SAASC,sBAAsB,QAAQ,YAAY;AAEnD,OAAO,MAAMF,MAAM,GAAGE,sBAAsB,CAACD,YAAY,CAAC","ignoreList":[]}

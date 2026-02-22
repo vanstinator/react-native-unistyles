@@ -1,0 +1,1 @@
+{"version":3,"names":["_reactNative","require","_core","RefreshControl","exports","createUnistylesElement","NativeRefreshControl"],"sourceRoot":"../../../../src","sources":["components/native/RefreshControl.tsx"],"mappings":";;;;;;AAAA,IAAAA,YAAA,GAAAC,OAAA;AACA,IAAAC,KAAA,GAAAD,OAAA;AAEO,MAAME,cAAc,GAAAC,OAAA,CAAAD,cAAA,GAAG,IAAAE,4BAAsB,EAACC,2BAAoB,CAAC","ignoreList":[]}

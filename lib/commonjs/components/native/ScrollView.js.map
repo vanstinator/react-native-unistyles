@@ -1,0 +1,1 @@
+{"version":3,"names":["_reactNative","require","_core","ScrollView","exports","createUnistylesElement","NativeScrollView"],"sourceRoot":"../../../../src","sources":["components/native/ScrollView.tsx"],"mappings":";;;;;;AAAA,IAAAA,YAAA,GAAAC,OAAA;AACA,IAAAC,KAAA,GAAAD,OAAA;AAEO,MAAME,UAAU,GAAAC,OAAA,CAAAD,UAAA,GAAG,IAAAE,4BAAsB,EAACC,uBAAgB,CAAC","ignoreList":[]}
