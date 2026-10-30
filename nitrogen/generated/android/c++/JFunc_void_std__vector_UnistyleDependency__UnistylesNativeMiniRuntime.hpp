@@ -35,7 +35,7 @@ namespace margelo::nitro::unistyles {
    */
   struct JFunc_void_std__vector_UnistyleDependency__UnistylesNativeMiniRuntime: public jni::JavaClass<JFunc_void_std__vector_UnistyleDependency__UnistylesNativeMiniRuntime> {
   public:
-    static auto constexpr kJavaDescriptor = "Lcom/margelo/nitro/unistyles/Func_void_std__vector_UnistyleDependency__UnistylesNativeMiniRuntime;";
+    static constexpr auto kJavaDescriptor = "Lcom/margelo/nitro/unistyles/Func_void_std__vector_UnistyleDependency__UnistylesNativeMiniRuntime;";
 
   public:
     /**
@@ -43,16 +43,16 @@ namespace margelo::nitro::unistyles {
      */
     void invoke(const std::vector<UnistyleDependency>& dependencies, const UnistylesNativeMiniRuntime& miniRuntime) const {
       static const auto method = javaClassStatic()->getMethod<void(jni::alias_ref<jni::JArrayClass<JUnistyleDependency>> /* dependencies */, jni::alias_ref<JUnistylesNativeMiniRuntime> /* miniRuntime */)>("invoke");
-      method(self(), [&]() {
-        size_t __size = dependencies.size();
+      method(self(), [&](auto&& __input) {
+        size_t __size = __input.size();
         jni::local_ref<jni::JArrayClass<JUnistyleDependency>> __array = jni::JArrayClass<JUnistyleDependency>::newArray(__size);
         for (size_t __i = 0; __i < __size; __i++) {
-          const auto& __element = dependencies[__i];
+          const auto& __element = __input[__i];
           auto __elementJni = JUnistyleDependency::fromCpp(__element);
           __array->setElement(__i, *__elementJni);
         }
         return __array;
-      }(), JUnistylesNativeMiniRuntime::fromCpp(miniRuntime));
+      }(dependencies), JUnistylesNativeMiniRuntime::fromCpp(miniRuntime));
     }
   };
 
@@ -70,16 +70,16 @@ namespace margelo::nitro::unistyles {
      * Invokes the C++ `std::function<...>` this `JFunc_void_std__vector_UnistyleDependency__UnistylesNativeMiniRuntime_cxx` instance holds.
      */
     void invoke_cxx(jni::alias_ref<jni::JArrayClass<JUnistyleDependency>> dependencies, jni::alias_ref<JUnistylesNativeMiniRuntime> miniRuntime) {
-      _func([&]() {
-              size_t __size = dependencies->size();
-              std::vector<UnistyleDependency> __vector;
-              __vector.reserve(__size);
-              for (size_t __i = 0; __i < __size; __i++) {
-                auto __element = dependencies->getElement(__i);
-                __vector.push_back(__element->toCpp());
-              }
-              return __vector;
-            }(), miniRuntime->toCpp());
+      _func([&](auto&& __input) {
+        size_t __size = __input->size();
+        std::vector<UnistyleDependency> __vector;
+        __vector.reserve(__size);
+        for (size_t __i = 0; __i < __size; __i++) {
+          auto __element = __input->getElement(__i);
+          __vector.push_back(__element->toCpp());
+        }
+        return __vector;
+      }(dependencies), miniRuntime->toCpp());
     }
 
   public:
@@ -89,7 +89,7 @@ namespace margelo::nitro::unistyles {
     }
 
   public:
-    static auto constexpr kJavaDescriptor = "Lcom/margelo/nitro/unistyles/Func_void_std__vector_UnistyleDependency__UnistylesNativeMiniRuntime_cxx;";
+    static constexpr auto kJavaDescriptor = "Lcom/margelo/nitro/unistyles/Func_void_std__vector_UnistyleDependency__UnistylesNativeMiniRuntime_cxx;";
     static void registerNatives() {
       registerHybrid({makeNativeMethod("invoke_cxx", JFunc_void_std__vector_UnistyleDependency__UnistylesNativeMiniRuntime_cxx::invoke_cxx)});
     }

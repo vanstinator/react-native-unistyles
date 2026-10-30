@@ -15,11 +15,11 @@ namespace margelo::nitro::unistyles {
   using namespace facebook;
 
   /**
-   * The C++ JNI bridge between the C++ enum "ColorScheme" and the the Kotlin enum "ColorScheme".
+   * The C++ JNI bridge between the C++ enum "ColorScheme" and the Kotlin enum "ColorScheme".
    */
   struct JColorScheme final: public jni::JavaClass<JColorScheme> {
   public:
-    static auto constexpr kJavaDescriptor = "Lcom/margelo/nitro/unistyles/ColorScheme;";
+    static constexpr auto kJavaDescriptor = "Lcom/margelo/nitro/unistyles/ColorScheme;";
 
   public:
     /**

@@ -15,11 +15,11 @@ namespace margelo::nitro::unistyles {
   using namespace facebook;
 
   /**
-   * The C++ JNI bridge between the C++ enum "Orientation" and the the Kotlin enum "Orientation".
+   * The C++ JNI bridge between the C++ enum "Orientation" and the Kotlin enum "Orientation".
    */
   struct JOrientation final: public jni::JavaClass<JOrientation> {
   public:
-    static auto constexpr kJavaDescriptor = "Lcom/margelo/nitro/unistyles/Orientation;";
+    static constexpr auto kJavaDescriptor = "Lcom/margelo/nitro/unistyles/Orientation;";
 
   public:
     /**

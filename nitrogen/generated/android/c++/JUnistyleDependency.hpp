@@ -15,11 +15,11 @@ namespace margelo::nitro::unistyles {
   using namespace facebook;
 
   /**
-   * The C++ JNI bridge between the C++ enum "UnistyleDependency" and the the Kotlin enum "UnistyleDependency".
+   * The C++ JNI bridge between the C++ enum "UnistyleDependency" and the Kotlin enum "UnistyleDependency".
    */
   struct JUnistyleDependency final: public jni::JavaClass<JUnistyleDependency> {
   public:
-    static auto constexpr kJavaDescriptor = "Lcom/margelo/nitro/unistyles/UnistyleDependency;";
+    static constexpr auto kJavaDescriptor = "Lcom/margelo/nitro/unistyles/UnistyleDependency;";
 
   public:
     /**
